@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head><title></title></head>
+  <body>
+    <h1><%= @artists.name %></h1>
+    <p>More info on:</p>
+    <a href="/artists/<%=@artists.id%>/edit">Edit</a>
+    <form action="/artists/<%=@artists.id%>" method="POST" style="display:inline-block;">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+    </form>
+  </body>
+</html>
